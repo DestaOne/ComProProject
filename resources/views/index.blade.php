@@ -31,50 +31,42 @@
         </div>
     </div>
 
+    <!-- Hanya menampilkan 3 layanan pilihan -->
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-        <a href="#" class="group block">
+        
+        <a href="{{ url('/layanan/mesin-kantor') }}" class="group block">
             <div class="relative aspect-[4/3] w-full overflow-hidden bg-slate-100 ring-1 ring-slate-900/5">
-                <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?q=80&w=2070&auto=format&fit=crop" alt="Mesin Kantor" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out">
+                <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mesin Kantor" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out">
             </div>
             <div class="mt-6">
                 <h3 class="text-xl font-semibold text-slate-900 group-hover:text-blue-800 transition-colors duration-200">Perdagangan Eceran Mesin Kantor</h3>
             </div>
         </a>
 
-        <a href="#" class="group block">
+        <a href="{{ url('/layanan/komputer') }}" class="group block">
             <div class="relative aspect-[4/3] w-full overflow-hidden bg-slate-100 ring-1 ring-slate-900/5">
-                <img src="https://images.unsplash.com/photo-1517433670267-08bbd4be890f?q=80&w=2080&auto=format&fit=crop" alt="Komputer" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out">
+                <img src="https://images.unsplash.com/photo-1551739440-5dd934d3a94a?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Komputer" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out">
             </div>
             <div class="mt-6">
                 <h3 class="text-xl font-semibold text-slate-900 group-hover:text-blue-800 transition-colors duration-200">Komputer & Perlengkapannya</h3>
             </div>
         </a>
 
-        <a href="#" class="group block">
+        <a href="{{ url('/layanan/furnitur') }}" class="group block">
             <div class="relative aspect-[4/3] w-full overflow-hidden bg-slate-100 ring-1 ring-slate-900/5">
-                <img src="https://images.unsplash.com/photo-1556911220-e15b29be8c8f?q=80&w=2070&auto=format&fit=crop" alt="Peralatan Listrik" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out">
+                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=958&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Furnitur" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out">
             </div>
             <div class="mt-6">
-                <h3 class="text-xl font-semibold text-slate-900 group-hover:text-blue-800 transition-colors duration-200">Peralatan Listrik & Penerangan</h3>
+                <h3 class="text-xl font-semibold text-slate-900 group-hover:text-blue-800 transition-colors duration-200">Perdagangan Eceran Furnitur</h3>
             </div>
         </a>
 
-        <a href="#" class="group block">
-            <div class="relative aspect-[4/3] w-full overflow-hidden bg-slate-100 ring-1 ring-slate-900/5">
-                <img src="https://images.unsplash.com/photo-1555066931-4365d14bab8c?q=80&w=2070&auto=format&fit=crop" alt="Piranti Lunak" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out">
-            </div>
-            <div class="mt-6">
-                <h3 class="text-xl font-semibold text-slate-900 group-hover:text-blue-800 transition-colors duration-200">Piranti Lunak (Software)</h3>
-            </div>
-        </a>
+    </div>
 
-        <a href="#" class="group block">
-            <div class="relative aspect-[4/3] w-full overflow-hidden bg-slate-100 ring-1 ring-slate-900/5">
-                <img src="https://images.unsplash.com/photo-1505693416388-ac5ce068af85?q=80&w=2070&auto=format&fit=crop" alt="Furnitur" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out">
-            </div>
-            <div class="mt-6">
-                <h3 class="text-xl font-semibold text-slate-900 group-hover:text-blue-800 transition-colors duration-200">Eceran Furnitur</h3>
-            </div>
+    <!-- Tombol Lihat Semua Layanan -->
+    <div class="mt-16 text-center">
+        <a href="{{ url('/layanan') }}" class="inline-flex h-12 items-center justify-center px-8 text-sm font-bold text-slate-900 ring-1 ring-slate-300 hover:bg-blue-900 hover:text-white transition duration-200 uppercase tracking-wider">
+            Lihat Semua Layanan &rarr;
         </a>
     </div>
 </div>
@@ -116,7 +108,7 @@
                 </div>
 
                 <div class="absolute inset-0 w-full h-full">
-                    <img src="https://images.unsplash.com/photo-1552664730-d307ca884978?q=80&w=2070&auto=format&fit=crop" alt="Kualitas Profesional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <img src="https://images.unsplash.com/photo-1637073849563-5b0ac780ec34?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D    " alt="Kualitas Profesional" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                 </div>
                 
                 <div class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
@@ -135,7 +127,7 @@
                 </div>
 
                 <div class="absolute inset-0 w-full h-full">
-                    <img src="https://images.unsplash.com/photo-1519389950473-47ba0277781c?q=80&w=2070&auto=format&fit=crop" alt="Dukungan Penuh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
+                    <img src="https://images.unsplash.com/photo-1766066014237-00645c74e9c6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Dukungan Penuh" class="w-full h-full object-cover group-hover:scale-105 transition-transform duration-700 ease-out">
                 </div>
                 
                 <div class="absolute inset-0 bg-gradient-to-t from-white via-white/80 to-transparent"></div>
@@ -147,6 +139,17 @@
             </div>
 
         </div>
+    </div>
+</div>
+
+
+<div class="bg-blue-900 py-20">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
+        <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight mb-6">Siap Membangun Ruang Kerja Ideal Anda?</h2>
+        <p class="text-blue-200 text-lg md:text-xl max-w-2xl mx-auto mb-10">Tim ahli kami siap memberikan konsultasi dan penawaran terbaik sesuai dengan anggaran dan spesifikasi perusahaan Anda.</p>
+        <a href="#" class="inline-flex h-12 items-center justify-center bg-white px-10 text-base font-bold text-blue-900 hover:bg-blue-50 transition duration-200 ring-1 ring-white">
+            Konsultasi Sekarang
+        </a>
     </div>
 </div>
 @endsection

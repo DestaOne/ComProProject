@@ -5,6 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>CV Elka Mandiri</title>
     @vite('resources/css/app.css')
+    <link rel="icon" type="image/x-icon" href="{{ asset('images/logo.png') }}">
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-100 selection:text-blue-900">
     
@@ -16,17 +17,24 @@
                     <img src="{{ asset('images/logo.png') }}" alt="Logo Elka Mandiri" class="h-8 w-auto">
                 </div>
 
+                <!-- Menu Desktop (Murni efek Hover seperti semula) -->
                 <div class="hidden md:flex items-center space-x-8">
-                    <a href="/" class="relative text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors duration-200 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-blue-800 after:transition-all after:duration-300 hover:after:w-full">Beranda</a>
-                    <a href="#" class="relative text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors duration-200 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-blue-800 after:transition-all after:duration-300 hover:after:w-full">Layanan</a>
-                    <a href="/tentang-kami" class="relative text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors duration-200 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-blue-800 after:transition-all after:duration-300 hover:after:w-full">Tentang Kami</a>
-                    <a href="#" class="relative text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors duration-200 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-blue-800 after:transition-all after:duration-300 hover:after:w-full">Kontak</a>
-
-                    <a href="#" class="relative inline-flex h-9 items-center justify-center rounded-full bg-blue-800 px-5 text-sm font-medium text-white hover:bg-blue-900 transition duration-200 ease-in-out">
+                    <a href="{{ url('/') }}" class="relative text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors duration-200 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-blue-800 after:transition-all after:duration-300 hover:after:w-full">
+                        Beranda
+                    </a>
+                    <a href="{{ url('/layanan') }}" class="relative text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors duration-200 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-blue-800 after:transition-all after:duration-300 hover:after:w-full">
+                        Layanan
+                    </a>
+                    <a href="{{ url('/tentang-kami') }}" class="relative text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors duration-200 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-blue-800 after:transition-all after:duration-300 hover:after:w-full">
+                        Tentang Kami
+                    </a>
+                    
+                    <a href="#" class="relative inline-flex h-9 items-center justify-center rounded-none bg-blue-800 px-5 text-sm font-medium text-white hover:bg-blue-900 transition duration-200 ease-in-out">
                         Hubungi Kami
                     </a>
                 </div>
 
+                <!-- Tombol Hamburger (Mobile) -->
                 <div class="flex items-center md:hidden">
                     <button type="button" onclick="document.getElementById('mobile-menu').classList.toggle('hidden')" class="inline-flex items-center justify-center p-2 text-slate-500 hover:text-slate-900 hover:bg-slate-100 focus:outline-none focus:ring-2 focus:ring-inset focus:ring-blue-800 transition-colors">
                         <svg class="block h-6 w-6" xmlns="http://www.w3.org/2000/svg" fill="none" viewBox="0 0 24 24" stroke="currentColor">
@@ -38,13 +46,19 @@
             </div>
         </div>
 
+        <!-- Panel Menu Mobile (Menggunakan deteksi halaman aktif) -->
         <div class="hidden md:hidden bg-white border-t border-slate-200 absolute w-full shadow-lg" id="mobile-menu">
             <div class="px-4 pt-2 pb-6 space-y-2">
-                <a href="#" class="block px-3 py-3 text-base font-medium text-slate-900 bg-slate-50 border-l-2 border-blue-800">Beranda</a>
-                <a href="#" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 hover:border-l-2 hover:border-blue-800 transition-all">Layanan</a>
-                <a href="#" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 hover:border-l-2 hover:border-blue-800 transition-all">Tentang Kami</a>
-                <a href="#" class="block px-3 py-3 text-base font-medium text-slate-600 hover:text-slate-900 hover:bg-slate-50 hover:border-l-2 hover:border-blue-800 transition-all">Kontak</a>
-
+                <a href="{{ url('/') }}" class="block px-3 py-3 text-base font-medium transition-all {{ request()->is('/') ? 'text-slate-900 bg-slate-50 border-l-2 border-blue-800' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50 hover:border-l-2 hover:border-blue-800' }}">
+                    Beranda
+                </a>
+                <a href="{{ url('/layanan') }}" class="block px-3 py-3 text-base font-medium transition-all {{ request()->is('layanan') ? 'text-slate-900 bg-slate-50 border-l-2 border-blue-800' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50 hover:border-l-2 hover:border-blue-800' }}">
+                    Layanan
+                </a>
+                <a href="{{ url('/tentang-kami') }}" class="block px-3 py-3 text-base font-medium transition-all {{ request()->is('tentang-kami') ? 'text-slate-900 bg-slate-50 border-l-2 border-blue-800' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50 hover:border-l-2 hover:border-blue-800' }}">
+                    Tentang Kami
+                </a>
+                
                 <div class="pt-4">
                     <a href="#" class="flex w-full items-center justify-center h-12 bg-blue-800 text-white text-base font-medium hover:bg-blue-900 transition duration-200">
                         Hubungi Kami
@@ -63,7 +77,7 @@
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
                 <div class="md:col-span-4">
                     <img src="{{ asset('images/elkamandiri.jpeg') }}" alt="Logo Elka Mandiri" class="h-8 w-auto">
-                    <p class="text-sm text-slate-400 leading-relaxed mb-6">
+                    <p class="text-sm text-slate-400 leading-relaxed mb-6 pt-5">
                         Solusi terpercaya untuk kebutuhan mesin kantor, komputer, perangkat lunak, dan furnitur.
                     </p>
                 </div>
@@ -72,7 +86,7 @@
                     <h3 class="text-xs font-semibold text-white tracking-wider uppercase mb-4">Kontak Kami</h3>
                     <ul class="space-y-3">
                         <li class="text-sm text-slate-400 leading-relaxed">
-                            Golden Jalan Tukad Batanghari Blok B Nomor 1, Kelurahan Panjer Kec, Denpasar Selatan, Kota Denpasar Provinsi Bali
+                            Jalan Tukad Batanghari Blok B Nomor 1, Kelurahan Panjer Kec, Denpasar Selatan, Kota Denpasar Provinsi Bali
                         </li>
                         <li class="text-sm text-slate-400">
                             Email: elkamandiri.cv@gmail.com

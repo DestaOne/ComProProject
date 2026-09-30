@@ -44,7 +44,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div class="grid grid-cols-1 md:grid-cols-2 gap-8">
             
-            <div class="p-10 ring-1 ring-slate-200 bg-white relative group transition-all duration-300 hover:shadow-xl">
+            <div class="p-10 ring-1 ring-slate-200 bg-white relative group transition-all duration-300">
                 <div class="absolute top-0 left-0 w-full h-[3px] bg-blue-800 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></div>
                 <h3 class="text-2xl font-bold text-slate-900 mb-6 tracking-tight uppercase">Visi</h3>
                 <p class="text-slate-600 text-lg leading-relaxed font-medium">
@@ -52,7 +52,7 @@
                 </p>
             </div>
 
-            <div class="p-10 ring-1 ring-slate-200 bg-white relative group transition-all duration-300 hover:shadow-xl">
+            <div class="p-10 ring-1 ring-slate-200 bg-white relative group transition-all duration-300">
                 <div class="absolute top-0 left-0 w-full h-[3px] bg-blue-800 transform origin-left scale-x-0 group-hover:scale-x-100 transition-transform duration-500 ease-out"></div>
                 <h3 class="text-2xl font-bold text-slate-900 mb-6 tracking-tight uppercase">Misi</h3>
                 <ul class="space-y-5">
@@ -105,7 +105,7 @@
                         <div>
                             <h4 class="text-xs font-bold text-slate-900 uppercase tracking-widest mb-1">Alamat Kantor</h4>
                             <p class="text-slate-600 text-sm leading-relaxed">
-                                Golden Jl. Tukad Batanghari Blok B No. 1,<br>
+                                Jl. Tukad Batanghari Blok B No. 1,<br>
                                 Panjer, Denpasar Selatan, Bali
                             </p>
                         </div>
