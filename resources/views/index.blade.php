@@ -26,44 +26,25 @@
 <div id="layanan" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
     <div class="flex flex-col md:flex-row justify-between items-end mb-12">
         <div class="max-w-2xl">
-            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Kategori Layanan Kami</h2>
+            <h2 class="text-3xl md:text-4xl font-bold text-slate-900 tracking-tight">Layanan Kami</h2>
             <p class="mt-4 text-lg text-slate-500">Beragam pilihan produk berkualitas untuk memenuhi segala kebutuhan operasional dan tata ruang perusahaan Anda.</p>
         </div>
     </div>
 
-    <!-- Hanya menampilkan 3 layanan pilihan -->
+    
     <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-        
-        <a href="{{ url('/layanan/mesin-kantor') }}" class="group block">
+        @foreach($services as $item)
+        <a href="{{ $item['url'] }}" class="group block">
             <div class="relative aspect-[4/3] w-full overflow-hidden bg-slate-100 ring-1 ring-slate-900/5">
-                <img src="https://images.unsplash.com/photo-1612815154858-60aa4c59eaa6?q=80&w=1170&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Mesin Kantor" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out">
+                <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out">
             </div>
             <div class="mt-6">
-                <h3 class="text-xl font-semibold text-slate-900 group-hover:text-blue-800 transition-colors duration-200">Perdagangan Eceran Mesin Kantor</h3>
+                <h3 class="text-xl font-semibold text-slate-900 group-hover:text-blue-800 transition-colors duration-200">{{ $item['title'] }}</h3>
             </div>
         </a>
-
-        <a href="{{ url('/layanan/komputer') }}" class="group block">
-            <div class="relative aspect-[4/3] w-full overflow-hidden bg-slate-100 ring-1 ring-slate-900/5">
-                <img src="https://images.unsplash.com/photo-1551739440-5dd934d3a94a?q=80&w=764&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Komputer" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out">
-            </div>
-            <div class="mt-6">
-                <h3 class="text-xl font-semibold text-slate-900 group-hover:text-blue-800 transition-colors duration-200">Komputer & Perlengkapannya</h3>
-            </div>
-        </a>
-
-        <a href="{{ url('/layanan/furnitur') }}" class="group block">
-            <div class="relative aspect-[4/3] w-full overflow-hidden bg-slate-100 ring-1 ring-slate-900/5">
-                <img src="https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=958&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D" alt="Furnitur" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out">
-            </div>
-            <div class="mt-6">
-                <h3 class="text-xl font-semibold text-slate-900 group-hover:text-blue-800 transition-colors duration-200">Perdagangan Eceran Furnitur</h3>
-            </div>
-        </a>
-
+        @endforeach
     </div>
-
-    <!-- Tombol Lihat Semua Layanan -->
+   
     <div class="mt-16 text-center">
         <a href="{{ url('/layanan') }}" class="inline-flex h-12 items-center justify-center px-8 text-sm font-bold text-slate-900 ring-1 ring-slate-300 hover:bg-blue-900 hover:text-white transition duration-200 uppercase tracking-wider">
             Lihat Semua Layanan &rarr;
@@ -75,7 +56,7 @@
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         
         <div class="mb-16">
-            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-widest uppercase mb-4">Kualitas. Keandalan. Pelayanan.</h2>
+            <h2 class="text-3xl md:text-4xl font-extrabold text-slate-900 tracking-widest uppercase mb-4 font-mon">Kualitas. Keandalan. Pelayanan.</h2>
             <p class="text-lg text-slate-500 max-w-2xl font-medium">Temukan alasan mengapa berbagai instansi dan perusahaan di Bali mempercayakan kebutuhan operasional dan ruang kerja mereka kepada CV Elka Mandiri.</p>
         </div>
 

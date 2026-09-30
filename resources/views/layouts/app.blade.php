@@ -46,7 +46,6 @@
             </div>
         </div>
 
-        <!-- Panel Menu Mobile (Menggunakan deteksi halaman aktif) -->
         <div class="hidden md:hidden bg-white border-t border-slate-200 absolute w-full shadow-lg" id="mobile-menu">
             <div class="px-4 pt-2 pb-6 space-y-2">
                 <a href="{{ url('/') }}" class="block px-3 py-3 text-base font-medium transition-all {{ request()->is('/') ? 'text-slate-900 bg-slate-50 border-l-2 border-blue-800' : 'text-slate-600 hover:text-slate-900 hover:bg-slate-50 hover:border-l-2 hover:border-blue-800' }}">
@@ -97,14 +96,14 @@
                     </ul>
                 </div>
 
-                <div class="md:col-span-4">
+                <div class="md:col-span-3">
                     <h3 class="text-xs font-semibold text-white tracking-wider uppercase mb-4">Layanan</h3>
                     <ul class="space-y-3">
-                        <li class="text-sm text-slate-400">Mesin Kantor</li>
-                        <li class="text-sm text-slate-400">Komputer & Perlengkapannya</li>
-                        <li class="text-sm text-slate-400">Peralatan Listrik & Penerangan</li>
-                        <li class="text-sm text-slate-400">Piranti Lunak (Software)</li>
-                        <li class="text-sm text-slate-400">Furnitur</li>
+                       <li> <a href="{{ url('/layanan/mesin-kantor') }}" class="text-sm text-slate-400 hover:text-white transition duration-200">Mesin Kantor</a> </li>
+                        <li> <a href="{{ url('/layanan/komputer') }}" class="text-sm text-slate-400 hover:text-white transition duration-200">Komputer & Perlengkapannya</a> </li>
+                        <li> <a href="{{ url('/layanan/peralatan-listrik') }}" class="text-sm text-slate-400 hover:text-white transition duration-200">Peralatan Listrik & Penerangan</a> </li>
+                        <li> <a href="{{ url('/layanan/software') }}" class="text-sm text-slate-400 hover:text-white transition duration-200">Piranti Lunak (Software)</a> </li>
+                        <li> <a href="{{ url('/layanan/furnitur') }}" class="text-sm text-slate-400 hover:text-white transition duration-200">Furnitur</a> </li>
                     </ul>
                 </div>
             </div>
