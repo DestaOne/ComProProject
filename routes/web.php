@@ -1,29 +1,14 @@
 <?php
 
+use App\Http\Controllers\ServiceController;
 use Illuminate\Support\Facades\Route;
-use App\Http\Controllers\PageController;
 
+Route::view('/', 'index');
 
-Route::get('/', [PageController::class, 'home']);
-Route::get('/layanan', [PageController::class, 'layanan']);
+Route::get('/layanan', [ServiceController::class, 'index'])->name('layanan.index');
+Route::get('/layanan/{service:slug}', [ServiceController::class, 'show'])->name('layanan.show');
 
-Route::get('/tentang-kami', function () {
-    return view('tentang');
-});
+Route::view('/tentang-kami', 'tentang');
+Route::view('/galeri', 'galeri');
 
-Route::get('/galeri', function () {
-    return view('galeri');
-});
-
-Route::get('/home-test', function () {
-    return view('home-test');
-});
-
-
-
-// Rute Detail Layanan
-Route::get('/layanan/mesin-kantor', function () { return view('layanan.mesin-kantor'); });
-Route::get('/layanan/komputer', function () { return view('layanan.komputer'); });
-Route::get('/layanan/peralatan-listrik', function () { return view('layanan.peralatan-listrik'); });
-Route::get('/layanan/software', function () { return view('layanan.software'); });
-Route::get('/layanan/furniture', function () { return view('layanan.furniture'); });
+require __DIR__.'/admin.php';

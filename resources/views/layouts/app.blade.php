@@ -111,11 +111,9 @@
                 <div class="md:col-span-4">
                     <h3 class="text-xs font-semibold text-white tracking-wider uppercase mb-4">Layanan</h3>
                     <ul class="space-y-3">
-                        <li><a href="{{ url('/layanan/mesin-kantor') }}" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Mesin Kantor</a></li>
-                        <li><a href="{{ url('/layanan/komputer') }}" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Komputer & Perlengkapannya</a></li>
-                        <li><a href="{{ url('/layanan/peralatan-listrik') }}" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Peralatan Listrik & Penerangan</a></li>
-                        <li><a href="{{ url('/layanan/software') }}" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Piranti Lunak (Software)</a></li>
-                        <li><a href="{{ url('/layanan/furniture') }}" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Furnitur Perkantoran</a></li>
+                        @foreach($footerServices as $footerService)
+                        <li><a href="{{ route('layanan.show', $footerService) }}" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">{{ $footerService->title }}</a></li>
+                        @endforeach
                     </ul>
                 </div>
             </div>
@@ -128,6 +126,8 @@
         </div>
     </footer>
 
+
+    <x-image-lightbox />
 
 </body>
 </html>

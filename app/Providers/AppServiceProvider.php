@@ -2,6 +2,8 @@
 
 namespace App\Providers;
 
+use App\Models\Service;
+use Illuminate\Support\Facades\View;
 use Illuminate\Support\ServiceProvider;
 
 class AppServiceProvider extends ServiceProvider
@@ -19,6 +21,9 @@ class AppServiceProvider extends ServiceProvider
      */
     public function boot(): void
     {
-        //
+        // Daftar layanan di footer mengikuti data dari admin.
+        View::composer('layouts.app', function ($view) {
+            $view->with('footerServices', Service::orderBy('id')->get());
+        });
     }
 }
