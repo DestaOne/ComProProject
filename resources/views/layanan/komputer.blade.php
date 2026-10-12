@@ -9,7 +9,7 @@
             </svg>
             Kembali ke Katalog
         </a>
-        <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">Komputer & Perlengkapannya</h1>
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">Perdagangan Eceran Komputer & Perlengkapannya</h1>
         <p class="text-lg md:text-xl text-slate-600 max-w-3xl font-medium leading-relaxed">
             Infrastruktur komputasi berkinerja tinggi untuk mendukung kelancaran pemrosesan data, konektivitas jaringan, dan workstation profesional.
         </p>
@@ -42,7 +42,7 @@
                 </div>
                 <div>
                     <h3 class="text-lg font-bold text-slate-900 uppercase tracking-widest mb-3 border-b-2 border-blue-800 inline-block pb-1">Standar Teknologi</h3>
-                    <p class="text-slate-600 font-medium leading-relaxed mt-4">
+                    <p class="text-slate-600 font-medium leading-relaxed mt-4 text-justify">
                         Kami menyediakan spesifikasi perangkat keras terkini yang dapat disesuaikan secara khusus dengan skala beban kerja instansi maupun perusahaan Anda.
                     </p>
                 </div>
@@ -51,15 +51,11 @@
     </div>
 </div>
 
-<div class="bg-blue-900 py-16 md:py-24">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight mb-6">Tertarik dengan layanan ini?</h2>
-        <p class="text-blue-200 text-lg mb-10 max-w-2xl font-medium">
-            Konsultasikan spesifikasi komputer dan perangkat jaringan yang Anda butuhkan. Dapatkan penawaran khusus untuk pengadaan skala besar.
-        </p>
-        <a href="#" class="inline-flex h-12 items-center justify-center bg-white px-10 text-base font-bold text-blue-900 hover:bg-slate-100 transition duration-200 ring-1 ring-white uppercase tracking-wide">
-            Minta Penawaran
-        </a>
-    </div>
-</div>
+<x-cta-banner 
+    title="Tertarik Dengan Layanan Ini?"
+    desc="Konsultasikan spesifikasi komputer dan perangkat jaringan yang Anda butuhkan. Dapatkan penawaran khusus untuk pengadaan skala besar."
+    buttonText="Minta Penawaran"
+    buttonUrl="/tentang-kami#kontak"
+/>
+
 @endsection

@@ -23,7 +23,7 @@ class PageController extends Controller
             [
                 'title' => 'Perdagangan Eceran Furnitur',
                 'image' => 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=958&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                'url'   => url('/layanan/furnitur'),
+                'url'   => url('/layanan/furniture'),
             ],
         ];
 
@@ -63,10 +63,10 @@ class PageController extends Controller
                 'bg'    => 'bg-white',
             ],
             [
-                'title' => 'Furnitur Perkantoran',
+                'title' => 'Furnitur',
                 'desc'  => 'Merancang tata ruang yang memacu produktivitas dengan furnitur ergonomis berkualitas tinggi. Kami mendistribusikan meja kerja, kursi ortopedi, lemari arsip, hingga partisi modular yang memadukan estetika modern dengan ketahanan jangka panjang.',
                 'image' => 'https://images.unsplash.com/photo-1586023492125-27b2c045efd7?q=80&w=958&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D',
-                'url'   => url('/layanan/furnitur'),
+                'url'   => url('/layanan/furniture'),
                 'bg'    => 'bg-slate-50',
             ],
         ];

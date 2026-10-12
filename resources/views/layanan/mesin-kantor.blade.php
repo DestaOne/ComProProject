@@ -42,7 +42,7 @@
                 </div>
                 <div>
                     <h3 class="text-lg font-bold text-slate-900 uppercase tracking-widest mb-3 border-b-2 border-blue-800 inline-block pb-1">Keandalan Operasional</h3>
-                    <p class="text-slate-600 font-medium leading-relaxed mt-4">
+                    <p class="text-slate-600 font-medium leading-relaxed mt-4 text-justify">
                         Setiap unit mesin kantor yang kami distribusikan dilengkapi dengan jaminan garansi resmi serta dukungan teknis purna jual untuk meminimalisir gangguan operasional perusahaan Anda.
                     </p>
                 </div>
@@ -51,15 +51,11 @@
     </div>
 </div>
 
-<div class="bg-blue-900 py-16 md:py-24">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight mb-6">Tertarik dengan layanan ini?</h2>
-        <p class="text-blue-200 text-lg mb-10 max-w-2xl font-medium">
-            Konsultasikan kebutuhan mesin kantor Anda sekarang. Tim kami siap memberikan penawaran harga terbaik yang transparan dan kompetitif.
-        </p>
-        <a href="#" class="inline-flex h-12 items-center justify-center bg-white px-10 text-base font-bold text-blue-900 hover:bg-slate-100 transition duration-200 ring-1 ring-white uppercase tracking-wide">
-            Minta Penawaran
-        </a>
-    </div>
-</div>
+<x-cta-banner 
+    title="Tertarik Dengan Layanan Ini?"
+    desc="Konsultasikan kebutuhan mesin kantor Anda sekarang. Tim kami siap memberikan penawaran harga terbaik yang transparan dan kompetitif."
+    buttonText="Minta Penawaran"
+    buttonUrl="/tentang-kami#kontak"
+/>
+
 @endsection

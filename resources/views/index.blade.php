@@ -1,27 +1,17 @@
 @extends('layouts.app')
 
 @section('content')
-<div class="relative w-full h-[600px] md:h-[700px] bg-[url('https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop')] bg-cover bg-center bg-no-repeat flex items-center justify-center">
-    
-    <div class="absolute inset-0 bg-slate-900/60"></div>
-
-    <div class="relative z-10 max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center mt-[-60px]">
-        <h1 class="text-4xl md:text-6xl lg:text-7xl font-extrabold text-white tracking-tight mb-6">
-            Solusi Lengkap Kebutuhan <br class="hidden md:block" />
-            Kantor & Ruang Kerja
-        </h1>
-        
-        <p class="mt-4 max-w-2xl mx-auto text-lg md:text-xl text-slate-200 mb-10 leading-relaxed font-medium">
-            Menyediakan mesin kantor, komputer, piranti lunak, hingga furnitur premium untuk mendukung efisiensi, kenyamanan, dan produktivitas bisnis Anda.
-        </p>
-        
-        <div class="flex justify-center">
-            <a href="#layanan" class="inline-flex h-12 items-center justify-center rounded-full bg-blue-800 px-10 text-base font-medium text-white hover:bg-blue-900 transition duration-200">
-                Lihat Layanan
-            </a>
-        </div>
-    </div>
-</div>
+<x-hero-banner 
+        image="https://images.unsplash.com/photo-1497366216548-37526070297c?q=80&w=2069&auto=format&fit=crop"
+       
+        title="Solusi Lengkap untuk Kebutuhan Operasional dan Ruang Kerja"
+        subtitle="Solusi terpercaya untuk kebutuhan mesin kantor, komputer, perangkat lunak, dan furnitur. Membangun ekosistem kerja profesional untuk bisnis Anda."
+    >
+        <!-- Isi dari "Slot" (Bagian ini akan muncul di bawah subtitle) -->
+        <a href="{{ url('/layanan') }}" class="inline-flex h-12 items-center justify-center bg-blue-800 px-10 text-sm font-bold text-white uppercase tracking-widest ring-1 ring-blue-800 hover:bg-transparent hover:text-white transition-all duration-300 ease-in-out">
+            Lihat Layanan Kami
+        </a>
+    </x-hero-banner>
 
 <div id="layanan" class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-24">
     <div class="flex flex-col md:flex-row justify-between items-end mb-12">
@@ -32,25 +22,52 @@
     </div>
 
     
-    <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-x-8 gap-y-16">
-        @foreach($services as $item)
-        <a href="{{ $item['url'] }}" class="group block">
-            <div class="relative aspect-[4/3] w-full overflow-hidden bg-slate-100 ring-1 ring-slate-900/5">
-                <img src="{{ $item['image'] }}" alt="{{ $item['title'] }}" class="object-cover w-full h-full group-hover:scale-105 transition-transform duration-700 ease-out">
-            </div>
-            <div class="mt-6">
-                <h3 class="text-xl font-semibold text-slate-900 group-hover:text-blue-800 transition-colors duration-200">{{ $item['title'] }}</h3>
-            </div>
-        </a>
-        @endforeach
+     <div class="grid grid-cols-1 md:grid-cols-2 border-t border-l border-slate-300 bg-white">
+            
+            <!-- Modul 1 -->
+            <a href="{{ url('/layanan/komputer') }}" class="block border-b border-r border-slate-300 p-12 hover:bg-slate-50 transition-colors duration-300 group cursor-pointer relative">
+                <span class="text-blue-600 text-sm font-semibold uppercase tracking-wider mb-8 block">01 / IT & Perangkat Lunak</span>
+                <h3 class="text-3xl font-semibold text-slate-900 mb-4 tracking-tight">Infrastruktur Digital</h3>
+                <p class="text-slate-600 text-lg font-light leading-relaxed mb-8 max-w-sm">Pengadaan PC, laptop, server, serta instalasi dan konfigurasi jaringan tingkat lanjut.</p>
+                <div class="absolute bottom-10 right-10 text-blue-600 transform group-hover:translate-x-2 transition-transform">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </div>
+            </a>
+
+            <!-- Modul 2 -->
+            <a href="{{ url('/layanan/mesin-kantor') }}" class="block border-b border-r border-slate-300 p-12 hover:bg-slate-50 transition-colors duration-300 group cursor-pointer relative">
+                <span class="text-blue-600 text-sm font-semibold uppercase tracking-wider mb-8 block">02 / Mesin Kantor</span>
+                <h3 class="text-3xl font-semibold text-slate-900 mb-4 tracking-tight">Efisiensi Dokumen</h3>
+                <p class="text-slate-600 text-lg font-light leading-relaxed mb-8 max-w-sm">Perangkat cetak skala besar, mesin fotokopi, dan sistem absensi biometrik.</p>
+                <div class="absolute bottom-10 right-10 text-blue-600 transform group-hover:translate-x-2 transition-transform">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </div>
+            </a>
+
+            <!-- Modul 3 -->
+            <a href="{{ url('/layanan/furniture') }}" class="block border-b border-r border-slate-300 p-12 hover:bg-slate-50 transition-colors duration-300 group cursor-pointer relative">
+                <span class="text-blue-600 text-sm font-semibold uppercase tracking-wider mb-8 block">03 / Furnitur</span>
+                <h3 class="text-3xl font-semibold text-slate-900 mb-4 tracking-tight">Ruang Kerja Ergonomis</h3>
+                <p class="text-slate-600 text-lg font-light leading-relaxed mb-8 max-w-sm">Desain dan suplai partisi ruangan, meja, kursi direksi, serta penyimpanan arsip.</p>
+                <div class="absolute bottom-10 right-10 text-blue-600 transform group-hover:translate-x-2 transition-transform">
+                    <svg class="w-8 h-8" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </div>
+            </a>
+
+            <!-- Modul 4 (DIUBAH MENJADI LINK CALL TO ACTION KE HALAMAN LAYANAN) -->
+            <a href="/layanan" class="border-b border-r border-slate-300 p-12 bg-blue-800 hover:bg-blue-700 transition-colors duration-300 group cursor-pointer relative flex flex-col justify-between min-h-[350px]">
+                <div>
+                    <span class="text-blue-200 text-sm font-semibold uppercase tracking-wider mb-8 block">Eksplorasi Katalog</span>
+                    <h3 class="text-4xl font-semibold text-white mb-4 tracking-tight leading-tight">Lihat layanan<br>lainnya</h3>
+                </div>
+                <!-- Panah yang meluncur saat di-hover -->
+                <div class="absolute bottom-10 right-10 text-white transform group-hover:translate-x-4 transition-transform duration-300">
+                    <svg class="w-10 h-10" fill="none" stroke="currentColor" viewBox="0 0 24 24"><path stroke-linecap="square" stroke-linejoin="miter" stroke-width="1.5" d="M17 8l4 4m0 0l-4 4m4-4H3"></path></svg>
+                </div>
+            </a>
+
+        </div>
     </div>
-   
-    <div class="mt-16 text-center">
-        <a href="{{ url('/layanan') }}" class="inline-flex h-12 items-center justify-center px-8 text-sm font-bold text-slate-900 ring-1 ring-slate-300 hover:bg-blue-900 hover:text-white transition duration-200 uppercase tracking-wider">
-            Lihat Semua Layanan &rarr;
-        </a>
-    </div>
-</div>
 
 <div class="bg-white border-t border-slate-200 py-24">
     <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -123,14 +140,12 @@
     </div>
 </div>
 
+<x-cta-banner 
+    title="Siap Membangun Ruang Kerja Ideal Anda?"
+    desc="Tim ahli kami siap memberikan konsultasi dan penawaran terbaik sesuai dengan anggaran dan spesifikasi perusahaan Anda."
+    buttonText="Konsultasi Sekarang"
+    buttonUrl="/tentang-kami#kontak"
+/>
 
-<div class="bg-blue-900 py-20">
-    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight mb-6">Siap Membangun Ruang Kerja Ideal Anda?</h2>
-        <p class="text-blue-200 text-lg md:text-xl max-w-2xl mx-auto mb-10">Tim ahli kami siap memberikan konsultasi dan penawaran terbaik sesuai dengan anggaran dan spesifikasi perusahaan Anda.</p>
-        <a href="#" class="inline-flex h-12 items-center justify-center bg-white px-10 text-base font-bold text-blue-900 hover:bg-blue-50 transition duration-200 ring-1 ring-white">
-            Konsultasi Sekarang
-        </a>
-    </div>
-</div>
+
 @endsection

@@ -6,9 +6,12 @@
     <title>CV Elka Mandiri</title>
     @vite('resources/css/app.css')
     <link rel="icon" type="image/x-icon" href="{{ asset('images/logo.png') }}">
+    <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@700&display=swap" rel="stylesheet">
 </head>
 <body class="bg-slate-50 text-slate-800 font-sans antialiased selection:bg-blue-100 selection:text-blue-900">
+
     
+
  <nav class="sticky top-0 z-50 bg-white/80 backdrop-blur-md border-b border-slate-200">
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="flex justify-between h-16 items-center">
@@ -28,8 +31,11 @@
                     <a href="{{ url('/tentang-kami') }}" class="relative text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors duration-200 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-blue-800 after:transition-all after:duration-300 hover:after:w-full">
                         Tentang Kami
                     </a>
+                    <a href="{{ url('/galeri') }}" class="relative text-sm font-medium text-slate-500 hover:text-slate-900 transition-colors duration-200 after:content-[''] after:absolute after:-bottom-1 after:left-0 after:w-0 after:h-[2px] after:bg-blue-800 after:transition-all after:duration-300 hover:after:w-full">
+                        Galeri
+                    </a>
                     
-                    <a href="#" class="relative inline-flex h-9 items-center justify-center rounded-none bg-blue-800 px-5 text-sm font-medium text-white hover:bg-blue-900 transition duration-200 ease-in-out">
+                    <a href="{{ url('/tentang-kami#kontak') }}" class="relative inline-flex h-9 items-center justify-center rounded-none bg-blue-800 px-5 text-sm font-medium text-white hover:bg-blue-900 transition duration-200 ease-in-out">
                         Hubungi Kami
                     </a>
                 </div>
@@ -59,7 +65,7 @@
                 </a>
                 
                 <div class="pt-4">
-                    <a href="#" class="flex w-full items-center justify-center h-12 bg-blue-800 text-white text-base font-medium hover:bg-blue-900 transition duration-200">
+                    <a href="{{ url('/tentang-kami#kontak') }}" class="flex w-full items-center justify-center h-12 bg-blue-800 text-white text-base font-medium hover:bg-blue-900 transition duration-200">
                         Hubungi Kami
                     </a>
                 </div>
@@ -75,8 +81,8 @@
         <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
             <div class="grid grid-cols-1 md:grid-cols-12 gap-8 lg:gap-12">
                 <div class="md:col-span-4">
-                    <img src="{{ asset('images/elkamandiri.jpeg') }}" alt="Logo Elka Mandiri" class="h-8 w-auto">
-                    <p class="text-sm text-slate-400 leading-relaxed mb-6 pt-5">
+                    <img src="{{ asset('images/elkamandiri.jpeg') }}" alt="Logo Elka Mandiri" class="h-8 w-auto mb-6">
+                    <p class="text-sm text-slate-400 leading-relaxed mb-6">
                         Solusi terpercaya untuk kebutuhan mesin kantor, komputer, perangkat lunak, dan furnitur.
                     </p>
                 </div>
@@ -84,26 +90,32 @@
                 <div class="md:col-span-4">
                     <h3 class="text-xs font-semibold text-white tracking-wider uppercase mb-4">Kontak Kami</h3>
                     <ul class="space-y-3">
-                        <li class="text-sm text-slate-400 leading-relaxed">
-                            Jalan Tukad Batanghari Blok B Nomor 1, Kelurahan Panjer Kec, Denpasar Selatan, Kota Denpasar Provinsi Bali
+                        <li>
+                            <a class="text-sm text-slate-400 hover:text-white transition-colors duration-200 block leading-relaxed">
+                                Jalan Tukad Batanghari Blok B Nomor 1, Kelurahan Panjer Kec, Denpasar Selatan, Kota Denpasar Provinsi Bali
+                            </a>
                         </li>
-                        <li class="text-sm text-slate-400">
-                            Email: elkamandiri.cv@gmail.com
+                        <li>
+                            <a href="mailto:elkamandiri.cv@gmail.com" class="text-sm text-slate-400 hover:text-white transition-colors duration-200 block">
+                                Email: elkamandiri.cv@gmail.com
+                            </a>
                         </li>
-                        <li class="text-sm text-slate-400">
-                            Telepon: 08113383679
+                        <li>
+                            <a href="https://wa.me/628113383679?text=halo%20elkamandiri,%20saya%20ingin%20berkonsultasi%20terkaitan%20layanan%20yang%20disediakan" class="text-sm text-slate-400 hover:text-white transition-colors duration-200 block">
+                                Telepon: 08113383679
+                            </a>
                         </li>
                     </ul>
                 </div>
 
-                <div class="md:col-span-3">
+                <div class="md:col-span-4">
                     <h3 class="text-xs font-semibold text-white tracking-wider uppercase mb-4">Layanan</h3>
                     <ul class="space-y-3">
-                       <li> <a href="{{ url('/layanan/mesin-kantor') }}" class="text-sm text-slate-400 hover:text-white transition duration-200">Mesin Kantor</a> </li>
-                        <li> <a href="{{ url('/layanan/komputer') }}" class="text-sm text-slate-400 hover:text-white transition duration-200">Komputer & Perlengkapannya</a> </li>
-                        <li> <a href="{{ url('/layanan/peralatan-listrik') }}" class="text-sm text-slate-400 hover:text-white transition duration-200">Peralatan Listrik & Penerangan</a> </li>
-                        <li> <a href="{{ url('/layanan/software') }}" class="text-sm text-slate-400 hover:text-white transition duration-200">Piranti Lunak (Software)</a> </li>
-                        <li> <a href="{{ url('/layanan/furnitur') }}" class="text-sm text-slate-400 hover:text-white transition duration-200">Furnitur</a> </li>
+                        <li><a href="{{ url('/layanan/mesin-kantor') }}" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Mesin Kantor</a></li>
+                        <li><a href="{{ url('/layanan/komputer') }}" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Komputer & Perlengkapannya</a></li>
+                        <li><a href="{{ url('/layanan/peralatan-listrik') }}" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Peralatan Listrik & Penerangan</a></li>
+                        <li><a href="{{ url('/layanan/software') }}" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Piranti Lunak (Software)</a></li>
+                        <li><a href="{{ url('/layanan/furniture') }}" class="text-sm text-slate-400 hover:text-white transition-colors duration-200">Furnitur Perkantoran</a></li>
                     </ul>
                 </div>
             </div>
@@ -115,6 +127,7 @@
             </div>
         </div>
     </footer>
+
 
 </body>
 </html>

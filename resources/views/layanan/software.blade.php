@@ -9,7 +9,7 @@
             </svg>
             Kembali ke Katalog
         </a>
-        <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">Piranti Lunak (Software)</h1>
+        <h1 class="text-3xl md:text-5xl lg:text-6xl font-extrabold text-slate-900 tracking-tight mb-6">Perdagangan Eceran Piranti Lunak (Software)</h1>
         <p class="text-lg md:text-xl text-slate-600 max-w-3xl font-medium leading-relaxed">
             Legalitas dan keamanan sistem digital korporat melalui penyediaan lisensi perangkat lunak resmi dan terpercaya.
         </p>
@@ -42,7 +42,7 @@
                 </div>
                 <div>
                     <h3 class="text-lg font-bold text-slate-900 uppercase tracking-widest mb-3 border-b-2 border-blue-800 inline-block pb-1">Kepatuhan Legal</h3>
-                    <p class="text-slate-600 font-medium leading-relaxed mt-4">
+                    <p class="text-slate-600 font-medium leading-relaxed mt-4 text-justify">
                         Kami menjamin keaslian lisensi untuk menghindari risiko hukum serta memastikan sistem digital perusahaan Anda mendapatkan pembaruan keamanan yang berkala.
                     </p>
                 </div>
@@ -51,15 +51,10 @@
     </div>
 </div>
 
-<div class="bg-blue-900 py-16 md:py-24">
-    <div class="max-w-4xl mx-auto px-4 sm:px-6 lg:px-8 text-center flex flex-col items-center">
-        <h2 class="text-3xl md:text-4xl font-bold text-white tracking-tight mb-6">Tertarik dengan layanan ini?</h2>
-        <p class="text-blue-200 text-lg mb-10 max-w-2xl font-medium">
-            Pastikan legalitas perangkat lunak perusahaan Anda terpenuhi. Hubungi kami untuk konsultasi dan pengadaan lisensi resmi.
-        </p>
-        <a href="#" class="inline-flex h-12 items-center justify-center bg-white px-10 text-base font-bold text-blue-900 hover:bg-slate-100 transition duration-200 ring-1 ring-white uppercase tracking-wide">
-            Minta Penawaran
-        </a>
-    </div>
-</div>
+<x-cta-banner 
+    title="Tertarik Dengan Layanan Ini?"
+    desc="Pastikan legalitas perangkat lunak perusahaan Anda terpenuhi. Hubungi kami untuk konsultasi dan pengadaan lisensi resmi."
+    buttonText="Minta Penawaran"
+    buttonUrl="/tentang-kami#kontak"
+/>
 @endsection
